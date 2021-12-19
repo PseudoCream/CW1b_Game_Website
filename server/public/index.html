@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Inknut Antiqua";
+            src: "https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap";
+        }
+    </style>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/e99fc18512.js" crossorigin="anonymous"></script>
+
+</html>
+</head>
+
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="The-Team.html">The Team</a></li>
+    </ul>
+</nav>
+
+<section>
+    <img src="../Assets/bloodmoon.png" id="moon">
+    <img src="../Assets/sky.png" id="mountains_behind">
+    <h2 id="Text">Champions of Iverdia</h2>
+    <a href ="#sec" id="explore_btn">Explore</a>
+    <img src="../Assets/graveyard_front.png" id="mountains_front">
+
+</section>
+<div class ="sec" id="sec">
+    <h2>Overview</h2>
+    <p>Champions of Ivredia is a fast-paced 2D party fighting game with a medieval gothic setting. The game pits 2-4 players against each other in a last player standing scenario.
+        The game is not deep or difficult enough for it to adhere with hardcore fans but there is a slight competitive feel to the game. The game is suited as a small party game as
+        it is quick and can have multiple people playing simultaneously. The game is exclusive to PC as it requires a browser that supports HTML 5 to be played. It will be developed
+        in JavaScript using Phaser 3.55.2 "Ichika" which is the most recent stable version of the Phaser framework.
+    </p>
+    <h2>Gameplay</h2>
+    <p><br>For the player(s) to win the game they must be the last surviving player, they will have to avoid or attack other players while avoiding obstacles on the map such
+        as spikes or falling into the abyss which will both kill the players instantly. The player can choose to focus on surviving by evading oncoming attacks or risk failing
+        to take out other players through combat. Each round an assortment of weapons and powerup items will fall from the top of the map at randomised times to aid players
+        but they will have to be quick to ensure another player doesn’t snatch the items first.<br>
+    </p>
+    <h2>Art and Visual Design</h2>
+    <p> <br>The games environment will be created using a number of asset packs in the GothicVania series by Ansimuz that can be found on itch.io. We decided using assets from these
+        packs would allow us to create unique levels but keep the design cohesive. Each asset pack will represent a different kingdoms environment.<br>
+        <center> <img src="../Assets/Sprites.png" id="sprite"></center>
+    </p>
+    <p> <br>Each player will play as a different character sprite to represent the difference in kingdoms the champions fight for.<br></p>
+    <br><br>
+    <h2>Levels</h2>
+    <p><br>The games environment will be created using a number of asset packs in the GothicVania series by Ansimuz that can be found on itch.io.
+        We decided using assets from these packs would allow us to create unique levels but keep the design cohesive. Each asset pack will represent
+        a different kingdoms environment.<br>
+        <br>While creating the concepts for the design of levels we looked at the levels within the game Stick Fight, as well as looking into common design typologies for 2D platformers.
+        The structure of the levels with start off fairly simple, as levels progress more obstacles will be added, such as more edges to fall down, the introduction of moving platforms
+        and spikes. And overall, more challenging layouts which will make it easier for players to coroner each other.<br>
+        Levels are designed to make it easy to fall off platforms, so it adds an element of having to be careful of your movements. So, when people start panicking and jumping,
+        they are more likely to fall and die, to ensure the rounds go quicker and keep the fast past nature of the game.
+    </p>
+    <br><br>
+
+    <center>  <div class="slider">
+        <div class ="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="../Assets/level_1.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../Assets/Level_2.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../Assets/Level_3.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../Assets/Level_4.jpeg" alt="">
+            </div>
+
+            <!--Automatic navigation start-->
+            <div class="navigation-auto">
+                <div class ="auto-btn1"></div>
+                <div class ="auto-btn2"></div>
+                <div class ="auto-btn3"></div>
+                <div class ="auto-btn4"></div>
+            </div>
+            <!--Automatic navigation end-->
+        </div>
+        <!--Manual navigation start-->
+        <div class="navigation-manual">
+            <label for ="radio1" class="manual-btn"></label>
+            <label for ="radio2" class="manual-btn"></label>
+            <label for ="radio3" class="manual-btn"></label>
+            <label for ="radio4" class="manual-btn"></label>
+        </div>
+
+        <!--Manual navigation end-->
+
+    </div></center>>
+
+    <script>
+        var counter = 1;
+        setInterval(function(){
+           document.getElementById('radio'+ counter).checked = true;
+           counter++;
+           if(counter > 4)
+           {
+               counter = 1;
+           }
+        }, 5000)
+    </script>
+
+    <br><br>
+       <h2>Gameplay Video</h2>
+       <div class="iframe-container">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/xwXtW9Epp_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+
+
+
+
+   </div>
+
+   <script>
+       let moon = document.getElementById('moon');
+       let mountains_behind = document.getElementById('mountains_behind');
+       let Text= document.getElementById('Text');
+       let explore_btn= document.getElementById('play_btn');
+       let mountains_front = document.getElementById('mountains_front');
+       let header = document.querySelector('header');
+
+       window.addEventListener('scroll',function ()
+       {
+           let value = window.scrollY;
+           moon.style.top = value * 1.05 +'px';
+           mountains_behind.style.top = value * 0.5 + 'px';
+           mountains_front.style.top = value * 0 + 'px';
+           Text.style.marginRight = value * 4 + 'px';
+           Text.style.marginTop = value * 1.5 + 'px';
+           explore_btn.style.marginTop = value * 1.5 + 'px';
+           header.style.top = value * 0.5 + 'px';
+
+       })
+
+   </script>
+
+   <div class="scroll-btn">
+       <i class="fas fa-chevron-circle-up" style="color: white"></i>
+       <script src="../JS/topScroll.js"></script>
+   </div>
+
+
+   <footer>
+       <br/><hr style="border: 1px solid rgba(154,5,117,0.8);"/> <br> B00365910 - Web Games Development 2<br>
+   </footer>
+
+   </body>
+   </html>

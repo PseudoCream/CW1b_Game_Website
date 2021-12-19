@@ -1,0 +1,479 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth ;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:#000019;
+    font-family: Garamond, serif;
+
+}
+/* Navigation Bar */
+nav{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 20px;
+
+}
+a.active,a:hover{
+    background: #ffff;
+    color: #2b1055;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/* Navigation Mobile */
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 20;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/* Home page */
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height: 100px;
+    background: linear-gradient(to top, #000019, transparent);
+    z-index: 1000;
+}
+section img
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon
+{
+    z-index: 8;
+
+}
+section img#mountains_front
+{
+    z-index: 10;
+
+}
+
+section img#mountains_back
+{
+    z-index: 9;
+
+}
+#Text
+{
+
+    position: absolute;
+    color: #ffffff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+
+
+}
+#explore_btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #ffffff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #000019;
+}
+.sec h2
+{
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.sec p
+{
+
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+@media (max-width: 858px)
+{
+    .sec p
+    {
+
+        font-size: 1em;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+}
+
+.iframe-container
+{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.iframe-container iframe
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    padding: 3%;
+    background-color: #000019;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+
+}
+
+/* Play Page */
+#game{
+    margin : 10px auto;
+    padding: 0;
+    width: 1200px;
+    height: 720px;
+
+
+}
+/* Play Page Mobile */
+@media (max-width: 858px)
+{
+    #game{
+        margin : 25px auto;
+        padding: 0;
+        width: 300px;
+        height: 300px;
+
+
+
+    }
+}
+
+/* Team Page */
+.container
+{
+    text-align: center;
+    background: white;
+
+
+}
+
+.header
+{
+    padding-top: 30px;
+    color: #444;
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+}
+.sub-container
+{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.teams
+{
+    margin: 10px;
+    padding: 22px;
+    max-width: 30%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+.teams:hover
+{
+    background: #ddd;
+    border-radius: 12px;
+}
+
+.teams img
+{
+    width: 200px;
+    height: 200px;
+
+}
+.name
+{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+
+}
+.title
+{
+    font-style: italic;
+    color:darkgray ;
+}
+.about
+{
+    margin: 20px 0;
+    font-weight: lighter;
+    color: gray;
+}
+.social-links
+{
+    margin:14px
+}
+.social-links a
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+}
+.social-links a i
+{
+    color: #444;
+}
+.social-links a:hover
+{
+    background-color: transparent;
+    transform:scale(1.5);
+}
+
+/* Team Page Mobile*/
+@media screen and (max-width: 600px)
+{
+    .teams
+    {
+        max-width: 100%;
+    }
+}
+/* Scroll back to top button */
+.scroll-btn
+{
+    font-size: 3rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+.scroll-btn:hover
+{
+    color: salmon;
+}
+
+/* image slider */
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.slides
+{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slides input
+{
+    display: none;
+}
+.slide
+{
+    width: 20%;
+    transition: 2s;
+}
+slide img
+{
+    max-width: 800px ;
+    max-height: 500px;
+}
+
+/* Manual slider */
+
+.navigation-manual
+{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn
+{
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child)
+{
+    margin-right: 40px;
+
+}
+.manual-btn:hover
+{
+    background:#2b1055;
+}
+
+#radio1:checked ~ .first
+{
+    margin-left: 0;
+}
+#radio2:checked ~ .first
+{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first
+{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first
+{
+    margin-left: -60%;
+}
+
+/* auto slider */
+.navigation-auto
+{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div
+{
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child)
+{
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1
+{
+    background:#ffffff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2
+{
+    background:#ffffff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3
+{
+    background:#ffffff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4
+{
+    background:#ffffff;
+}
+
+
+
