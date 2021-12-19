@@ -136,7 +136,8 @@ class level_1 extends Phaser.Scene {
     this.keyApressed = false;
     this.keyDpressed = false;
 
-    this.blackScreen = this.add.rectangle(0, 0, 1600, 1200, 0x000000, 1).setInteractive();
+    this.blackScreen = this.add.rectangle(0, 0, config.width *2, config.height* 2, 0x000000, 1).setInteractive();
+    this.blackScreen.setOrigin(0.5, 0.5);
     this.blackScreen.depth = 100;
     this.blackScreen.setVisible(false);
     self.blackScreen.setActive(false);
