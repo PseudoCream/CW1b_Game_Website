@@ -106,6 +106,7 @@ class Main_Menu extends Phaser.Scene {
             this.button2.setAlpha(1);
             this.button2Text.setAlpha(1);
             this.helpImg.setAlpha(0);
+            this.helpText.setAlpha(0);
             this.button3.setActive(false);
             this.button3Text.setActive(false);
             this.button3.setAlpha(0);
