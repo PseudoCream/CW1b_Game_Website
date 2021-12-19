@@ -275,8 +275,7 @@ function displayPlayers(self, playerInfo, sprite) {
   const player = self.add.sprite(playerInfo.x, playerInfo.y, sprite).setOrigin(0.5, 0.5);
   player.setSize(playerInfo.width, 40, true);
   const recHitbox = self.add.rectangle(playerInfo.x, playerInfo.y, 28, 38, 0xffffff, 0)
-  if (playerInfo.team === 'blue') player.setTint(0x0000ff);
-  else player.setTint(0xff0000);
+  player.setTint(0xff0000);
   player.playerId = playerInfo.playerId;
   recHitbox.playerId = playerInfo.playerId;
   self.players.add(player);
